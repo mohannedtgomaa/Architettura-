@@ -1,0 +1,19 @@
+# Build image
+docker build -t my-app:latest .
+
+# List images
+docker images
+
+# Run container
+docker run -d --name my-app -p 8080:80 my-app:latest
+
+# View logs
+docker logs my-app
+
+# Stop & remove
+docker stop my-app
+docker rm my-app
+
+# Push to registry
+docker tag my-app:latest repo/my-app:v1
+docker push repo/my-app:v1
